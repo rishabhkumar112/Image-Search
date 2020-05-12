@@ -82,6 +82,23 @@
     
     <h4 style = "align-items: center; margin-left: 40%;"><b><i>Search Results</i></b> </h4>
     <div style = "margin-left:30%"> 
+        <br>
+        <table style = "width:400px" class="table table-striped">
+        <thead>
+            <tr>
+                <th>Hashtag</th>
+                <th>Search Count</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for hashtag in hashtable %} 
+            <tr>
+                <td>{{hashtag[0]}}</td>
+                <td>{{hashtag[1]}}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+        </table>
         {%for image in details%}
             <img class = "imgwall" src = "/uploads/{{image[0]}}"> 
             <p class = "ctext"> <b> Uploaded by: <i>{{image[1]}}</i></b> </p> 
